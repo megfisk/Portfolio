@@ -1,0 +1,128 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+1. How many patients are diagnosed with heart disease
+```{r}
+clev = read.csv("ClevelandHeart.csv")
+sum(clev$AHD == "Yes")
+```
+```{r}
+YAHD = clev[clev$AHD=="Yes",]
+NAHD = clev[clev$AHD=="No",]
+```
+2. 95% confidence interval for mean of patients diagnosed with heart disease:
+```{r}
+t.test(YAHD$RestBP)
+```
+95% confidence interval for mean of patients not diagnosed with heart disease:
+```{r}
+t.test(NAHD$RestBP)
+```
+The two confidence intervals have a little overlap with each other.
+
+3. Side-by-side boxplot:
+```{r}
+boxplot(RestBP~AHD,data=clev,main="Resting Blood Pressure of Patients Diagnosed or Not with Heart Disease")
+```
+The data does overlap between the two groups, much more than is evident in the confidence intervals shown above. This overlap is more evident in the bopxplot because...
+
+4. Q-Q plot of patients diagnosed with heart disease:
+```{r}
+qqnorm(YAHD$RestBP,main="Patients Diagnosed with Heart Disease QQ Plot")
+```
+
+```{r}
+qqnorm(NAHD$RestBP,main="Patients Not Diagnosed with Heart Disease QQ Plot")
+```
+There are a couple of obvious outliers in both graphs on the higher and lower ends. Both graphs also do not seem to be normally distributed, as they do not form more of a stair step plot than a straight line.
+
+5. T-test for RestBP of patients diagnosed with heart disease vs those not diagnosed:
+```{r}
+t.test(YAHD$RestBP,NAHD$RestBP)
+```
+The null hypothesis is that there is no difference between the sample means and the alternative hypothesis is that the sample means are not equal to each other. In other words, the null hypothesis is that the mean Rest BP of the group of patients diagnosed with AHD is equal to the mean Rest BP of the group of patients not diagnosed with AHD. The alternative hypothesis is that the mean Rest BP of the group diagnosed with AHD is not equal to the mean Rest BP of the group not diagnosed with AHD. We can reject the null hypothesis (p value = 0.009409 < 0.05) in favor of the alternative hypothesis. 
+
+6. Wilcox test:
+```{r}
+wilcox.test(YAHD$RestBP,NAHD$RestBP)
+```
+We can reject the null hypothesis (p value = 0.02597 < 0.05) for the alternative hypothesis. The conclusions for the t-test and the Wilcox test agree.
+
+7. Confidence interval of chol values for patients diagnosed with heart disease:
+```{r}
+t.test(YAHD$Chol)
+```
+confidence interval of chol values for patients not diagnosed with heart disease:
+```{r}
+t.test(NAHD$Chol)
+```
+The confidence intervals do overlap.
+
+8. Boxplot:
+```{r}
+boxplot(Chol~AHD,data=clev,main="Chol values for Patients Diagnosed and Not Diagnosed with AHD")
+```
+Yes, the data does overlap.
+
+9. Q-Q Plot of Chol Values in Patients Diagnosed with AHD:
+```{r}
+qqnorm(YAHD$Chol,main="Chol Values in Patients Diagnosed with AHD")
+```
+Q-Q Plot of patients not diagnosed with AHD:
+```{r}
+qqnorm(NAHD$Chol,main="Chol Values of Patients Not Diagnosed with AHD")
+```
+There are a couple of outliers in each data set, both at the higher and lower ends of the graph. The data sets seem approximately normally distributed otherwise.
+
+10. T-Test for chol values in patients diagnosed and not diagnosed with AHD:
+```{r}
+t.test(YAHD$Chol,NAHD$Chol)
+```
+The null hypothesis is that the two sample means are equal to each other and the alternative hypothesis is that the two sample means are not equal to each other. In other words, the null hypothesis is that the mean Chol of the group of patients diagnosed with AHD will equal the mean Chol of the group that was not. The alternative hypothesis is that the mean Chol of the group of patients diagnosed with AHD is not equal to the mean Chol of the group not diagnosed with AHD. We can reject the null hypothesis (p value < 0.05) in favor of the alternative hypothesis.
+
+11. Wilcox test:
+```{r}
+wilcox.test(YAHD$Chol,NAHD$Chol)
+```
+We can reject the null hypothesis (p value = 0.03536) in favor of the alternative hypothesis. The conclusions from the t-test and the wilcox test agree.
+
+12. Confidence interval of Max HR for patients diagnosed with AHD:
+```{r}
+t.test(YAHD$MaxHR)
+```
+confidence intercal of Max HR for patients not diagnosed with AHD:
+```{r}
+t.test(NAHD$MaxHR)
+```
+There is no overlap in the confidence intervals.
+
+13. Boxplot:
+```{r}
+boxplot(MaxHR~AHD,data=clev,main="Max HR for Patients Diagnosed and Not Diagnosed with AHD")
+```
+The data does seem to overlap a bit, which does not agree with the confidence intervals from the prior two tests that say that there is no overlap.
+
+14. Q-Q Plot of Max HR values of patients diagnosed with AHD:
+```{r}
+qqnorm(YAHD$MaxHR,main="Max HR of Patients Diagnosed with AHD")
+```
+Q-Q Plot of patients not diagnosed with AHD:
+```{r}
+qqnorm(NAHD$MaxHR,main="Max HR of Patients Not Diagnosed with AHD")
+```
+There are not any obvious outliers in either plot, and they both seem to be approximately normally distributed.
+
+15. T-Test for Max HR values in patients diagnosed and not diagnosed with AHD:
+```{r}
+t.test(YAHD$MaxHR,NAHD$MaxHR)
+```
+The null hypothesis is that the two sample means will be equal to each other and the alternative hypothesis is that the two sample means will not be equal to each other. In other words, Ho = the mean Max HR of the group of patients diagnosed with AHD will be equal to the mean Max HR of the group of patients not diagnosed with AHD. Ha = the mean Max HR of the group of patietns diagnosed with AHD will not equal the mean Max HR of the group of patients not diagnosed with AHD. We can reject the null hypothesis (p value << 0.05) in favor of the alternative hypothesis. The p value in this test is much smaller than the p values in the previous tests.
+
+16. Wilcox test:
+```{r}
+wilcox.test(YAHD$MaxHR,NAHD$MaxHR)
+```
+We can reject the null hypothesis (p value = 1.861e-13) in favor of the alternative hypothesis at a significance level of alpha = 0.05. The t-test and the wilcox test conclusions agree that we can reject the null.

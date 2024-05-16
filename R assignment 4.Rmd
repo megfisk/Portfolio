@@ -1,0 +1,104 @@
+---
+title: "R Assignment 4"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+```{r}
+peng = read.csv("penguins.csv")
+```
+1.
+```{r}
+table(peng$island,peng$species)
+```
+Adelie penguins were found on all three islands, whereas Chinstrap penguins were only found on Dream and Gentoo penguins were only found on Biscoe.
+
+2.
+```{r}
+boxplot(bill_length_mm~species,data=peng,ylab="Bill Length")
+```
+
+Null Hypothesis: There is no difference in mean bill length between the penguin species.
+Alternative hypothesis: There is a difference in mean bill length between the penguin species.
+
+```{r}
+lmfit = lm(bill_length_mm~species, data=peng)
+anova(lmfit)
+```
+We can reject the null hypothesis (p value < 2.2e-16) in favor of the alternative hypothesis. There is sufficient evidence that the three species have different mean bill lengths.
+
+
+```{r}
+qqnorm(lmfit$residuals)
+```
+The residuals are approximately normally distributed.
+
+```{r}
+plot(lmfit$fitted.values,lmfit$residuals,xlab="Group Means",ylab="Residuals")
+```
+The three groups appear to have a similar standard deviation as each other.
+
+3.
+```{r}
+boxplot(bill_depth_mm~species+sex, data=peng, cex.axis=0.6, ylab="Bill Depth")
+```
+Null hypothesis 1: There is no difference in mean bill depth between the three species of penguins.
+Null hypothesis 2: There is no difference in mean bill depth between the two sexes of penguins.
+Null hypothesis 3: There is no difference in mean bill depth between the sexes within the same species of penguin.
+
+ANOVA table w/o interaction
+```{r}
+lmfit2 = lm(bill_depth_mm~species+sex,data=peng)
+anova(lmfit2)
+```
+ANOVA table w/ interaction:
+```{r}
+lmfit1 = lm(bill_depth_mm~species*sex, data=peng)
+anova(lmfit1)
+```
+From the ANOVA table w/ interaction, we are able to see that the interaction term is not significant with a p-value of 0.6693. In both tables we are able to see that the species and sex terms are significant with p-values of <2.2e-16.
+
+```{r}
+qqnorm(lmfit2$residuals)
+```
+```{r}
+qqnorm(lmfit1$residuals)
+```
+The residuals are approximately normally distributed.
+
+```{r}
+plot(lmfit2$fitted.values, lmfit2$residuals, xlab="Group Means", ylab="Residuals")
+```
+The higher group means have a slightly larger standard deviation of bill depths.
+
+4.
+```{r}
+adele = peng[peng$species == "Adelie",]
+boxplot(body_mass_g~island+sex, data=adele, cex.axis= 0.6, ylab="Body Mass")
+```
+Null hypothesis 1: There is no difference in the mean body masses between the penguins on the three islands.
+Null hypothesis 2: There is no difference in the mean body masses between the two sexes of penguins.
+Null hypothesis 3: There is no difference in the mean body masses between the two sexes on each island.
+
+ANOVA table w/o interactions:
+```{r}
+lmfit4 = lm(body_mass_g~island+sex, data=adele)
+anova(lmfit4)
+```
+ANOVA table w/ interactions:
+```{r}
+lmfit3 = lm(body_mass_g~island*sex, data=adele)
+anova(lmfit3)
+```
+We can tell from the ANOVA table w/ interactions that the interaction term is not significant (p-value = 0.1262) and the island term is also not significant (p-value = 0.9896). The sex term is significant in both tables (p-value <2.2e-16).
+
+```{r}
+qqnorm(lmfit4$residuals)
+```
+The residuals are approximately normally distributed.
+
+```{r}
+plot(lmfit4$fitted.values, lmfit4$residuals, xlab="Group Means", ylab="Residuals")
+```
+The groups with the lower group means have similar standard deviation of body mass to each other and the groups with the higher group means have similar standard deviation of body mass to each other. The groups with higher group means have a larger standard deviation of body mass than the groups with lower group means.

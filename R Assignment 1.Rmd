@@ -1,0 +1,127 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+R Assignment #1
+```{r}
+clev = read.csv("ClevelandHeart.csv")
+```
+1. Amount of male patients:
+```{r}
+sum(clev$Sex == "male")
+```
+There are 206 male patients out of the 303 patients in the study.
+
+2. The amount of entries missing from the Thal column:
+```{r}
+sum(is.na(clev$Thal))
+```
+2. The rows missing entries from the Thal column:
+```{r}
+which(is.na(clev$Thal))
+```
+2. All the data for these patients missing entries for the Thal column:
+```{r}
+clev[88,]
+```
+```{r}
+clev[267,]
+```
+3. Scatterplot with Age on the x-axis and MaxHR on the y-axis:
+```{r}
+plot(clev$Age,clev$MaxHR,xlab="Age",ylab="Max HR",main="Age vs Max HR")
+```
+In the plot, you can see that as the age of the patients increased, their max heart rate tends to decrease.
+
+4. Histogram 1
+```{r}
+hist(clev$Chol,xlab="Chol",main="Histogram 1")
+```
+4. Histogram 2:
+```{r}
+hist(clev$Chol,breaks=20,xlab="Chol",main="Histogram 2")
+```
+4. Boxplot:
+```{r}
+boxplot(clev$Chol,main="Chol Boxplot")
+```
+4. QQ Plot:
+```{r}
+qqnorm(clev$Chol,main="Chol Q-Q Plot")
+```
+Yes, there are outliers in the data set. These outliers are most apparent in the Q-Q plot and the box plot. In the box plot, 4-5 outliers are seen above the upper limit and in the Q-Q plot there are 5 points that are not in line with the rest of the data.
+5. 
+```{r}
+mean(clev$Chol)
+median(clev$Chol)
+sd(clev$Chol)
+IQR(clev$Chol)
+```
+6. Max Chol Value:
+```{r}
+max(clev$Chol)
+```
+Number of patients with normal Chol values:
+```{r}
+x = clev$Chol
+sum(x<200)
+```
+Number of patients with high Chol values:
+```{r}
+sum(x>240)
+```
+7. Side by side boxplot of Chol values for men and women:
+```{r}
+boxplot(Chol~Sex,data=clev,main="Chol Values of Men and Women")
+```
+8. Histogram of male Chol values:
+```{r}
+mchol = clev[clev$Sex=="male",]
+hist(mchol$Chol,main="Male Chol Histogram",xlab="Male Chol Values")
+```
+8. Male chol boxplot:
+```{r}
+boxplot(mchol$Chol,main="Male Chol Boxplot")
+```
+Male Chol Q-Q plot:
+```{r}
+qqnorm(mchol$Chol,main="Male Chol Q-Q Plot")
+```
+```{r}
+mean(mchol$Chol)
+median(mchol$Chol)
+sd(mchol$Chol)
+IQR(mchol$Chol)
+```
+Looking at the male chol data, it is hard to tell if there is an outlier from the histogram and boxplot. The most telling data is in the Q-Q plot, with a couple of data points being out of line with the rest towards the start of the graph.
+
+9. Female chol histogram:
+```{r}
+fchol = clev[clev$Sex=="female",]
+hist(fchol$Chol,main="Female Chol Histogram",xlab="Female Chol Values")
+```
+Female Chol Boxplot:
+```{r}
+boxplot(fchol$Chol,main="Female Chol Boxplot")
+```
+Female Chol Q-Q Plot:
+```{r}
+qqnorm(fchol$Chol,main="Female Chol Q-Q Plot")
+```
+```{r}
+mean(fchol$Chol)
+median(fchol$Chol)
+sd(fchol$Chol)
+IQR(fchol$Chol)
+```
+Looking at the female chol data, there is an outlier present shown in the boxplot at a much higher value than the upper fence. It is also present in the Q-Q plot as being out of line with the trend all the way in the corner of the graph.
+
+10. Side by side boxplot of MaxHR for patients diagnosed and not diagnosed with heart disease:
+```{r}
+boxplot(MaxHR~AHD,data=clev,main="Max HR for Patients Diagnosed or Not Diagnosed with Heart Disease")
+
+```
+
