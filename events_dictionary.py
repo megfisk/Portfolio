@@ -1,8 +1,6 @@
 # ITP 115, Spring 2024
 # Assignment 10
 # Name: Megan Fisk
-# Email: mafisk@usc.edu
-# Section: 31849
 # Description: This program allows users to add, update, and delete events from an event dictionary
 
 
