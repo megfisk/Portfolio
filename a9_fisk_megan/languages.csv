@@ -1,0 +1,101 @@
+id,title,type,year,creators,website,books,rank,indentation,users,jobs
+actionscript,ActionScript,pl,1998,Gary Grossman,NA,108,53,FALSE,1630,88
+ada,Ada,pl,1980,Jean Ichbiah,http://www.adaic.org,64,21,FALSE,12116,2184
+apl,APL,pl,1964,Kenneth E. Iverson,NA,13,90,FALSE,3670,0
+arduino,Arduino Programming Language,pl,2005,NA,https://www.arduino.cc,265,26,NA,527398,598
+arm,ARM,assembly,1985,Sophie Wilson and Steve Furber and Acorn Computers,NA,52,29,FALSE,123423,7695
+asp,ASP,template,1996,NA,NA,72,72,NA,1865,9630
+assembly-language,Assembly language,assembly,1960,NA,NA,0,37,NA,26543,1329
+awk,awk,pl,1977,Alfred Aho and Peter J. Weinberger and Brian Kernighan,http://www.cs.princeton.edu/~bwk/btl.mirror/,26,60,FALSE,4680,7
+bash,Bash,pl,1989,Brian Fox,https://www.gnu.org/software/bash/,33,39,FALSE,61747,4774
+basic,BASIC,pl,1964,John G. Kemeny and Thomas E. Kurtz,NA,57,59,FALSE,7025,0
+c,C,pl,1972,Dennis Ritchie,NA,78,2,FALSE,3793768,59919
+clojure,Clojure,pl,2007,Rich Hickey,https://clojure.org,60,40,FALSE,44933,469
+cobol,COBOL,pl,1959,Howard Bromberg and Norman Discount and Vernon Reeves and Jean E. Sammet and William Selden and Gertrude Tierney and Grace Hopper,NA,301,18,FALSE,187188,2616
+coffeescript,CoffeeScript,pl,2009,Jeremy Ashkenas,http://coffeescript.org,17,63,TRUE,23320,216
+common-lisp,Common Lisp,pl,1984,Scott Fahlman and Richard P. Gabriel and David A. Moon and Kent Pitman and Guy Steele and Dan Weinreb,http://common-lisp.net/,6,85,FALSE,1891,24
+cpp,C++,pl,1985,Bjarne Stroustrup,http://isocpp.org/,128,6,NA,4128238,61098
+crystal,Crystal,pl,2014,Ary Borenszweig and Juan Wajnerman and Brian Cardiff,https://crystal-lang.org,0,62,FALSE,27065,0
+csharp,C#,pl,2000,Anders Hejlsberg,https://docs.microsoft.com/dotnet/csharp/language-reference/,3,11,FALSE,217261,19747
+css,CSS,stylesheetLanguage,1996,Håkon Wium Lie,NA,102,19,FALSE,2881846,45617
+cuda,CUDA,pl,2007,NA,https://developer.nvidia.com/cuda-zone,35,48,FALSE,38623,769
+d,D,pl,2001,Walter Bright and Andrei Alexandrescu,https://dlang.org,2,80,FALSE,6311,0
+dart,Dart,pl,2011,Lars Bak,http://www.dartlang.org,30,50,FALSE,38325,208
+delphi,Delphi,pl,1995,NA,https://www.embarcadero.com/products/delphi,88,61,FALSE,7084,181
+doi,DOI,schema,2000,NA,https://www.doi.org/,0,75,NA,21001,0
+eiffel,Eiffel,pl,1986,Bertrand Meyer,https://dev.eiffel.com/Main_Page,10,70,FALSE,1583,0
+elixir,Elixir,pl,2011,José Valim,https://elixir-lang.org,31,45,FALSE,55882,214
+elm,Elm,pl,2012,Evan Czaplicki,http://elm-lang.org,5,66,TRUE,11377,127
+erlang,Erlang,pl,1986,Joe Armstrong and Robert Virding and Mike Williams,https://www.erlang.org,29,47,FALSE,27148,308
+f-sharp,F#,pl,2005,Don Syme,http://fsharp.org,0,64,TRUE,4316,0
+fortran,Fortran,pl,1957,John Backus,NA,321,13,FALSE,165151,1931
+ftp,FTP,protocol,1971,NA,NA,0,81,NA,13916,0
+go,Go,pl,2009,Rob Pike and Ken Thompson and Robert Griesemer,https://go.dev/,5,17,FALSE,525179,6403
+graphql,GraphQL,queryLanguage,2012,Lee Byron,http://graphql.org/,11,86,FALSE,18676,0
+groovy,Groovy,pl,2003,James Strachan,http://groovy-lang.org/,22,78,FALSE,6056,0
+haskell,Haskell,pl,1990,Paul Hudak and John Hughes,https://www.haskell.org,70,30,TRUE,37628,495
+html,HTML,textMarkup,1991,Tim Berners-Lee,NA,116,5,FALSE,5570873,69531
+http,HTTP,protocol,1989,NA,NA,12,36,NA,33780,771996
+isbn,ISBN,schema,1970,NA,NA,3,41,NA,49430,53
+java,Java,pl,1995,James Gosling,https://oracle.com/java/,401,0,FALSE,5550123,85206
+javascript,JavaScript,pl,1995,Brendan Eich,NA,351,1,FALSE,5962666,63993
+json,JSON,dataNotation,2001,Douglas Crockford,https://www.json.org/,17,16,FALSE,355741,9228
+julia,Julia,pl,2012,Jeff Bezanson and Alan Edelman and Stefan Karpinski and Viral B. Shah,http://julialang.org/,22,34,FALSE,81911,85
+kotlin,Kotlin,pl,2011,Andrey Breslav,https://kotlinlang.org,99,24,FALSE,130094,5276
+labview,LabVIEW G,pl,1986,NA,http://www.ni.com/labview,0,99,NA,8125,2012
+latex,LaTeX,textMarkup,1985,NA,http://latex-project.org/,8,87,FALSE,7721,0
+lisp,Lisp,pl,1958,John McCarthy,NA,75,32,NA,61481,303
+lua,Lua,pl,1993,Roberto Ierusalimschy,https://www.lua.org/,35,33,FALSE,58860,1106
+maple,Maple,pl,1982,NA,http://www.maplesoft.com/products/maple/,28,65,FALSE,53310,511
+markdown,Markdown,textMarkup,2004,John Gruber and Aaron Swartz,NA,5,94,TRUE,12503,0
+mathematica,Mathematica,pl,1988,Stephen Wolfram,http://www.wolfram.com/mathematica,72,44,FALSE,148741,1553
+matlab,MATLAB,pl,1984,Cleve Moler,http://mathworks.com/products/matlab,177,10,FALSE,2661579,32228
+mediawiki,MediaWiki,wikiMarkup,2002,NA,https://en.wikipedia.org/wiki/MediaWiki#Markup,2,97,NA,7133,69
+modula-2,Modula-2,pl,1978,Niklaus Wirth,NA,1,51,FALSE,655,0
+modula-3,Modula-3,pl,1986,NA,http://www.modula3.org,0,73,FALSE,641,0
+mysql,MySQL,queryLanguage,1995,David Axmark and Michael Widenius,http://www.mysql.com/,168,14,FALSE,2608362,47466
+nginx-config,Nginx,configFormat,2004,NA,NA,6,91,FALSE,4245,2884
+nodejs,Node.js,pl,2009,Ryan Dahl,https://nodejs.org,79,43,NA,374143,6864
+objective-c,Objective-C,pl,1984,Brad Cox,https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html,15,42,FALSE,12380,4276
+ocaml,OCaml,pl,1996,Xavier Leroy,http://ocaml.org,11,68,FALSE,3341,0
+opencl,OpenCL,pl,2009,NA,https://www.khronos.org/opencl,25,93,FALSE,3731,266
+pascal,Pascal,pl,1970,Niklaus Wirth,NA,145,28,FALSE,7708,102
+perl,Perl,pl,1987,Larry Wall,https://www.perl.org,276,9,FALSE,491984,13482
+php,PHP,pl,1995,Rasmus Lerdorf,https://php.net,274,8,FALSE,2356101,30349
+postgresql,PostgreSQL,queryLanguage,1986,Marc G. Fournier,https://www.postgresql.org/,40,23,FALSE,340751,13084
+powerpc,PowerPC,isa,1992,NA,NA,10,69,NA,9126,59
+powershell,PowerShell,pl,2006,Jeffrey Snover,http://microsoft.com/powershell,107,27,FALSE,208708,19576
+prolog,Prolog,pl,1972,Alain Colmerauer,NA,100,38,FALSE,51482,446
+python,Python,pl,1991,Guido van Rossum,https://www.python.org/,342,3,TRUE,2818037,46976
+r,R,pl,1993,Ross Ihaka and Robert Gentleman,https://www.r-project.org,40,15,FALSE,1075613,14173
+racket,Racket,pl,1994,Matthias Felleisen and Matthew Flatt and Robert Bruce Findler and Shriram Krishnamurthi,http://racket-lang.org,4,74,FALSE,7353,48
+reason,Reason,pl,2016,NA,https://reasonml.github.io/,1,58,FALSE,11216,0
+regex,Regular Expressions,queryLanguage,1951,NA,NA,0,55,FALSE,23343,0
+rest,REST,protocol,1996,NA,NA,5,77,NA,24190,26215
+ruby,Ruby,pl,1995,Yukihiro Matsumoto,https://www.ruby-lang.org,65,12,FALSE,357730,11438
+rust,Rust,pl,2010,Graydon Hoare,https://www.rust-lang.org,65,25,FALSE,302193,141
+sagemath,Sage,pl,2005,NA,http://www.sagemath.org/,2,83,FALSE,1116,0
+sas,SAS,pl,1976,Anthony James Barr,https://www.sas.com,96,35,FALSE,361103,4682
+scala,Scala,pl,2004,Martin Odersky,http://www.scala-lang.org,130,20,FALSE,139471,4525
+scheme,Scheme,pl,1970,Guy Steele and Gerald Jay Sussman,http://www.scheme-reports.org/,24,49,FALSE,3796,1174
+scratch,Scratch,visual,2002,NA,https://scratch.mit.edu/,51,96,NA,16942,0
+smali,Smali,assembly,2010,NA,NA,0,92,FALSE,8729,0
+smalltalk,Smalltalk,pl,1972,Alan Kay and Dan Ingalls and Adele Goldberg,NA,32,76,FALSE,5400,0
+smtp,SMTP,protocol,1982,NA,NA,1,98,NA,13330,0
+soap,SOAP,xmlFormat,1998,Dave Winer and Don Box and Bob Atkinson and Mohsen Al-Ghosein,NA,11,84,NA,10535,7493
+solidity,Solidity,contractLanguage,2014,Christian Reitwiessner and Alex Beregszaszi,http://github.com/ethereum/solidity,22,56,FALSE,31940,937
+sql,SQL,queryLanguage,1974,Donald D. Chamberlin and Raymond F. Boyce,NA,182,4,FALSE,7179119,219617
+swift,Swift,pl,2014,Chris Lattner,https://swift.org,125,22,FALSE,362590,3754
+tcl,Tcl,pl,1988,John Ousterhout,http://www.tcl.tk,26,52,FALSE,3106,0
+tcp,TCP,protocol,1974,NA,NA,6,95,NA,16700,0
+tls,TLS,protocol,1999,NA,NA,1,89,NA,24595,0
+typescript,TypeScript,pl,2012,Anders Hejlsberg,http://www.typescriptlang.org/,56,31,FALSE,216959,1542
+uml,UML,xmlFormat,1996,NA,NA,112,82,NA,11035,0
+vba,VBA,pl,1993,NA,NA,270,54,NA,3650,511
+verilog,Verilog,hardwareDescriptionLanguage,1984,NA,NA,34,57,FALSE,5176,246
+vhdl,VHDL,hardwareDescriptionLanguage,1983,NA,NA,50,88,FALSE,6245,0
+visual-basic,Visual Basic,pl,1991,NA,https://msdn.microsoft.com/en-us/library/windows/desktop/ms788229.aspx,0,46,FALSE,15898,3294
+x86-isa,X86,isa,1978,NA,NA,22,79,NA,7400,0
+xml,XML,dataNotation,1996,NA,NA,151,7,FALSE,1917452,42277
+yacc,Yacc,grammarLanguage,1975,NA,NA,4,71,FALSE,3087,17
+yaml,YAML,dataNotation,2001,NA,http://www.yaml.org/spec/1.2/spec.html#Introduction,0,67,TRUE,13981,61
