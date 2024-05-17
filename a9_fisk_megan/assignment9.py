@@ -1,8 +1,6 @@
 # ITP 115, Spring 2024
 # Assignment 9
 # Name: Megan Fisk
-# Email: mafisk@usc.edu
-# Section: 31849
 # Description: This program reads data from a csv file about computer languages and allows the user to select data
 # they want to save to a file and write to a text file
 
