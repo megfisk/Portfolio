@@ -1,8 +1,6 @@
 # ITP 115, Spring 2024
 # Assignment 8
 # Name: Megan Fisk
-# Email: mafisk@usc.edu
-# Section: 318249
 # Description: allow the user to crack a computer generated code using new functions and list modifications
 
 # import the random module
